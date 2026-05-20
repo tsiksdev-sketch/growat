@@ -6,6 +6,7 @@ const nav = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/get-involved", label: "Get Involved" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -16,7 +17,7 @@ export function SiteHeader() {
       <div className="mx-auto flex  max-w-7xl items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2 group">
        
-            <Image src='/logo.png' width={1000} alt='logo' height={1000} loading="lazy" className="h-25  w-50"/>
+            <Image src='/logo.png' width={1000} alt='logo' height={1000} loading="eager" className="h-25  w-50"/>
           
         
         </Link>
