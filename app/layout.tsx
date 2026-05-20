@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { APP_NAME, APP_DESCRIPTION,APP_SLOGAN } from "@/lib/constants";
-import { Roboto } from "next/font/google";
+import { SiteHeader } from "@/components/shared/navbar";
+import { SiteFooter } from "@/components/shared/foot";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import CustomCursor from "@/components/Cursor";
 
-const roboto =Roboto({
-  subsets:['latin'],
-  weight:['400','500','700']
-})
+
 
 const geistSans = Geist({ 
   variable: "--font-geist-sans",
@@ -38,7 +38,16 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
      
-      <body>{children}</body>
+      <body>
+        <SiteHeader/> 
+      <SmoothScroll>
+     {children}
+      <SiteFooter/>
+     </SmoothScroll>
+      <CustomCursor/>
+      </body>
+     
+
     </html>
   );
 }

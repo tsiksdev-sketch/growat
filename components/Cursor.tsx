@@ -65,8 +65,8 @@ const Cursor: FC = () => {
   }, [])
 
   return (
-    <div ref={pointer} className="pointer-events-none absolute flex items-center justify-center">
-      <div id="pointer-ring" className="size-8 bg-cover bg-no-repeat bg-center " style={{backgroundImage:'url(/foot.png)'}} />
+    <div ref={pointer} className="pointer-events-none absolute flex items-center z-1000  justify-center">
+      <div id="pointer-ring" className="size-8 bg-cover bg-no-repeat bg-center " style={{backgroundImage:'url(/lea.png)'}} />
       {/* <div className="absolute size-1 rounded-full bg-white" /> */}
     </div>
   )
