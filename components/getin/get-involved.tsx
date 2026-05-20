@@ -1,33 +1,20 @@
 
-import { HandHeart, Sprout, Users, Building2 } from "lucide-react";
-import volunteers from "@/assets/volunteers.jpg";
 import Image from "next/image";
+import PagesHero from "../PagesHero";
+import { tiers,ways } from "@/constants";
 
 
-const tiers = [
-  { amount: "$5", trees: "1 tree", note: "A perfect first step." },
-  { amount: "$25", trees: "5 trees", popular: true, note: "Plant a small grove in a community forest." },
-  { amount: "$100", trees: "20 trees", note: "Sponsor a hillside for a year." },
-  { amount: "$500", trees: "100 trees", note: "Fund a school's outdoor classroom." },
-];
-
-const ways = [
-  { icon: HandHeart, title: "Donate", text: "100% of your donation funds a named project — track its growth for ten years." },
-  { icon: Sprout, title: "Plant with us", text: "Join a planting day near you. No experience needed, just good boots." },
-  { icon: Users, title: "Volunteer", text: "Lend your skills — from photography to soil science to social media." },
-  { icon: Building2, title: "Partner", text: "For businesses ready to embed real, traceable nature investment." },
-];
 
 export default function GetInvolved() {
   return (
     <div>
-      <section className="bg-gradient-hero">
-        <div className="mx-auto max-w-5xl px-6 py-24 text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Get involved</p>
-          <h1 className="mt-4 font-display text-5xl md:text-7xl text-balance">Grow with us.</h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">Whether you give five dollars or five Saturdays, you're growing a forest. Pick a way that fits your season of life.</p>
-        </div>
-      </section>
+      <PagesHero
+        subtitle="Get involved"
+        title="Grow with us."
+        description="Whether you give five dollars or five Saturdays, you're growing a forest. Pick a way that fits your season of life."
+      />
+
+      
 
       {/* DONATE TIERS */}
       <section className="mx-auto max-w-7xl px-6 py-20">

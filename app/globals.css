@@ -112,3 +112,7 @@
   .shadow-card  { box-shadow: var(--shadow-card); }
   .text-balance { text-wrap: balance; }
 }
+
+hv:hover p{
+  color:white
+}

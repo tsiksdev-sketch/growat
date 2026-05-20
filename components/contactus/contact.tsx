@@ -1,18 +1,18 @@
 'use client'
 import { Mail, MapPin, Phone } from "lucide-react";
+import PagesHero from "../PagesHero";
 
 
 
 export default function Contact() {
   return (
     <div>
-      <section className="bg-gradient-hero">
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Contact</p>
-          <h1 className="mt-4 font-display text-5xl md:text-7xl text-balance">Let's grow something.</h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">Questions, partnerships, press, or just a tree story — write to us. We read everything.</p>
-        </div>
-      </section>
+      <PagesHero
+        subtitle="Contact"
+        title="Let's grow something."
+        description="Questions, partnerships, press, or just a tree story — write to us. We read everything."
+      / >
+      
 
       <section className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-5">
         <form className="md:col-span-3 rounded-3xl border border-border bg-card p-8 shadow-card" onSubmit={(e) => e.preventDefault()}>
@@ -43,7 +43,7 @@ export default function Contact() {
           {[
             { icon: Mail, label: "Email", value: "info@growatreefoundation.com" },
             { icon: Phone, label: "Phone", value: "+263776373513 /+263777700465" },
-            { icon: MapPin, label: "HQ", value: "info@growatreefoundation.com" },
+            { icon: MapPin, label: "HQ", value: "8 Jackson Hillside Harare" },
           ].map((c) => (
             <div key={c.label} className="flex gap-4 rounded-2xl border border-border bg-card p-6 shadow-card">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-leaf text-primary-foreground">

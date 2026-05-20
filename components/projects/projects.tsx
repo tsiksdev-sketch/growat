@@ -1,32 +1,19 @@
 
 import { MapPin } from "lucide-react";
 import Image from "next/image";
+import PagesHero from "../PagesHero";
+import { projectsy } from "@/constants";
 
-
-
-const projects = [
-  { img: '/aerial-forest.jpg', place: "Atlantic Forest", country: "Brazil", goal: 500000, planted: 312400, tag: "Reforestation", desc: "Restoring one of the world's most biodiverse and most threatened rainforests." },
-  { img: '/volunteers.jpg', place: "Rift Valley", country: "Kenya", goal: 120000, planted: 98200, tag: "Community", desc: "Indigenous-led agroforestry returning shade, soil, and harvests to highland farms." },
-  { img: '/sapling-hands.jpg', place: "Cascadia", country: "Pacific NW, USA", goal: 80000, planted: 41100, tag: "Restoration", desc: "Replanting after wildfire with fire-resilient, climate-ready native conifers." },
-  { img: '/canopy.jpg', place: "Borneo Lowlands", country: "Indonesia", goal: 250000, planted: 142000, tag: "Reforestation", desc: "Reconnecting fragmented orangutan habitat across degraded peatland." },
-  { img: '/hero-planting.jpg', place: "Highlands", country: "Scotland", goal: 60000, planted: 22500, tag: "Rewilding", desc: "Bringing back native broadleaf woodland to barren glens." },
-  { img: '/aerial-forest.jpg', place: "Sahel Belt", country: "Senegal", goal: 200000, planted: 88300, tag: "Community", desc: "A living wall against desertification, grown by women's cooperatives." },
-];
 
 export default function Projects() {
   return (
     <div>
-      <section className="bg-gradient-hero">
-        <div className="mx-auto max-w-5xl px-6 py-24 text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Projects</p>
-          <h1 className="mt-4 font-display text-5xl md:text-7xl text-balance">Forests in the making.</h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">Every project is a partnership with the people who live on the land. Explore where we're growing — and what's growing back.</p>
-        </div>
-      </section>
+      
+      <PagesHero subtitle="Projects" title="Forests in the making." description="Every project is a partnership with the people who live on the land. Explore where we're growing — and what's growing back." />
 
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => {
+          {projectsy.map((p) => {
             const pct = Math.round((p.planted / p.goal) * 100);
             return (
               <article key={p.place} className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-glow">

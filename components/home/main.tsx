@@ -2,19 +2,7 @@
 import { ArrowRight, Sprout, Users, Globe2, Heart, TreePine, Sun } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-
-const stats = [
-  { value: "2.4M", label: "Trees Planted" },
-  { value: "48", label: "Countries" },
-  { value: "12k+", label: "Volunteers" },
-  { value: "320", label: "Active Projects" },
-];
-
-const pillars = [
-  { icon: Sprout, title: "Reforestation", text: "Restoring native woodlands on degraded land with the right tree in the right place." },
-  { icon: Users, title: "Community", text: "Partnering with local growers, schools, and tribes to lead long-term stewardship." },
-  { icon: Globe2, title: "Climate", text: "Drawing down carbon while protecting biodiversity, soil, and freshwater systems." },
-];
+import { stats,pillars } from "@/constants";
 
 export default function Home() {
   return (
@@ -53,7 +41,7 @@ export default function Home() {
 
           <div className="relative">
             <div className="relative aspect-4/5 overflow-hidden rounded-3xl shadow-glow">
-              <Image src='/hero-planting.jpg' alt="Community planting a young tree at golden hour" width={1600} height={1100} className="h-full w-full object-cover" />
+              <Image src='/hero-planting.jpg' loading="eager" alt="Community planting a young tree at golden hour" width={1600} height={1100} className="h-full w-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-background p-4 shadow-card md:flex items-center gap-3">
               <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-sun">
@@ -71,9 +59,9 @@ export default function Home() {
 
       {/* STATS */}
       <section className="border-y border-border/60 bg-background">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden bg-border md:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden bg-border md:grid-cols-4 ">
           {stats.map((s) => (
-            <div key={s.label} className="bg-background px-6 py-10 text-center">
+            <div key={s.label} className="bg-background px-6 py-10 text-center hover:bg-green-700 hv transition-all hover:scale-125">   
               <p className="font-display text-4xl font-semibold text-primary md:text-5xl">{s.value}</p>
               <p className="mt-2 text-sm uppercase tracking-wider text-muted-foreground">{s.label}</p>
             </div>

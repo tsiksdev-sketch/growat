@@ -1,26 +1,17 @@
 
 import React from "react";
 import Image from "next/image";
-
-const values = [
-  { title: "Native first", text: "We plant species that belong, not just what grows fast." },
-  { title: "People-led", text: "Local communities design and steward every project." },
-  { title: "Radically transparent", text: "Open data, open books, open forests." },
-  { title: "Long horizon", text: "We commit to ten years on every site we plant." },
-];
+import PagesHero  from "../PagesHero";
+import { values } from "@/constants";
 
 export default function About() {
   return (
     <div>
-      <section className="bg-gradient-hero">
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center md:py-32">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Our story</p>
-          <h1 className="mt-4 font-display text-5xl md:text-7xl text-balance">A foundation built on roots.</h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground text-balance">
-         The Grow A Tree Foundation was established in 2017 with the initial goal of planting 5 million trees throughout Southern Africa. We recognized the significant impact that trees, particularly fruit trees, can have on rural communities in coping with the effects of climate change. Since its establishment, the Foundation has expanded its operations and now takes a comprehensive approach to climate change initiatives.
-          </p>
-        </div>
-      </section>
+      <PagesHero
+        subtitle="Our story"
+        title="A foundation built on roots."
+        description="The Grow A Tree Foundation was established in 2017 with the initial goal of planting 5 million trees throughout Southern Africa. We recognized the significant impact that trees, particularly fruit trees, can have on rural communities in coping with the effects of climate change. Since its establishment, the Foundation has expanded its operations and now takes a comprehensive approach to climate change initiatives."
+      />
 
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">

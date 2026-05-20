@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo, useState } from "react";
-
+import PagesHero from "./PagesHero";
 
 
 type Category = "Reforestation" | "Fruit Trees" | "Community Farms" | "Rewilding" | "Volunteers";
@@ -32,15 +32,8 @@ export default function Gallery() {
 
   return (
     <div>
-      <section className="bg-gradient-hero">
-        <div className="mx-auto max-w-5xl px-6 py-24 text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Gallery</p>
-          <h1 className="mt-4 font-display text-5xl md:text-7xl text-balance">Moments from the field.</h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            From freshly planted saplings to thriving orchards — explore our work by project type.
-          </p>
-        </div>
-      </section>
+     
+      <PagesHero subtitle="Gallery" title="Moments from the field." description=" From freshly planted saplings to thriving orchards — explore our work by project type."/>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="mb-10 flex flex-wrap justify-center gap-2">
