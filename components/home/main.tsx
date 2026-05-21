@@ -22,7 +22,7 @@ export default function Home() {
               We're a global community restoring forests, reviving ecosystems, and growing the people who care for them. Every tree planted is a promise to the future.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/get-involved" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-glow hover:-translate-y-0.5">
+              <Link href="/get" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-glow hover:-translate-y-0.5">
                 Plant a tree <ArrowRight className="h-4 w-4" />
               </Link>
               <Link href="/projects" className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background px-6 text-sm font-medium text-foreground transition-colors hover:bg-secondary">
@@ -151,7 +151,7 @@ export default function Home() {
           <div className="absolute -left-10 bottom-0 h-48 w-48 rounded-full bg-sun/20 blur-3xl" />
           <h2 className="relative font-display text-4xl md:text-6xl text-balance">A tree today. A forest tomorrow.</h2>
           <p className="relative mx-auto mt-4 max-w-xl text-lg opacity-90">Just $5 plants and protects a tree for ten years. Imagine what a forest of us can do.</p>
-          <Link href="/get-involved" className="relative mt-8 inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-medium text-primary shadow-soft transition-transform hover:-translate-y-0.5">
+          <Link href="/get" className="relative mt-8 inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-medium text-primary shadow-soft transition-transform hover:-translate-y-0.5">
             Plant your first tree <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

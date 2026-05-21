@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { ArrowUp } from "lucide-react";
+import {  ChevronUp } from "lucide-react";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
@@ -76,7 +76,7 @@ export default function ScrollToTop() {
           style={{ transition: "stroke-dashoffset 0.15s linear" }}
         />
       </svg>
-      <ArrowUp className="h-5 w-5 text-primary" strokeWidth={2.4} />
+      <ChevronUp className="h-5 w-5 text-primary" strokeWidth={2.4} />
     </button>
   );
 }

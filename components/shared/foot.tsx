@@ -11,10 +11,10 @@ export function SiteFooter() {
               <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-leaf">
                 <Leaf className="h-5 w-5 text-primary-foreground" strokeWidth={2.2} />
               </span>
-              <span className="font-display text-lg font-semibold">Growing Trees Foundation</span>
+              <span className="font-display text-lg font-semibold">Grow A Tree Foundation</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              Planting trees, restoring ecosystems, and growing communities — one sapling at a time.
+              Planting trees, restoring ecosystems, and growing communities.
             </p>
            
           </div>
@@ -37,7 +37,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-2 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} Growing Trees Foundation. A registered 501(c)(3) nonprofit.</p>
+          <p>© {new Date().getFullYear()} Grow A Tree Foundation.</p>
           <p>Crafted with care for a greener tomorrow.</p>
         </div>
       </div>
