@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { APP_NAME, APP_DESCRIPTION,APP_SLOGAN } from "@/lib/constants";
-import { SiteHeader } from "@/components/shared/navbar";
-import { SiteFooter } from "@/components/shared/foot";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import CustomCursor from "@/components/Cursor";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -40,10 +38,10 @@ export default function RootLayout({
     >
      
       <body>
-        <SiteHeader/> 
+      
       <SmoothScroll>
      {children}
-      <SiteFooter/>
+
      </SmoothScroll>
       <ScrollToTop />
       <CustomCursor/>
