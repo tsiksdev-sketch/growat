@@ -88,6 +88,30 @@
 }
 
 @layer base {
+  /* Custom scrollbar — green thumb on cream track */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 9999px;
+    border: 2px solid var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-leaf);
+  }
+  /* Firefox */
+  html {
+    scrollbar-color: var(--color-primary) var(--color-background);
+    scrollbar-width: thin;
+  }
+}
+
+
+@layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
   body {
